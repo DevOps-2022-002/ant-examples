@@ -3,17 +3,17 @@
 <property name="base" value="build"/>
 
 <target name= "clean">
-<delete dir="$base"/>
+<delete dir="${base}"/>
 </target>
 
 <target name="compile" depends="clean">
-<mkdir dir="$base/classes"/>
-<javac srcdir="src" destdir="$base/classes"/>
+<mkdir dir="${base}/classes"/>
+<javac srcdir="src" destdir="${base}/classes"/>
 </target>
 
 <target name="jar" depends="compile">
-<mkdir dir="$base/jar"/>
-<jar destfile="$base/jar/HelloWorld.jar" basedir="$base/classes">
+<mkdir dir="${base}/jar"/>
+<jar destfile="${base}/jar/HelloWorld.jar" basedir="${base}/classes">
 <manifest>
 <attribute name="Main-Class" value="com.st.ant.HelloWorld"/>
 </manifest>
@@ -21,11 +21,11 @@
 </target>
 
 <target name="run" depends="info">
-<java jar=$base/jar/HelloWorld.jar" fork="true"/>
+<java jar="${base}/jar/HelloWorld.jar" fork="true"/>
 </target>
 
 <target name="info" depends="jar">
-<echo>my project is $App</echo>
+<echo>my project is ${App}</echo>
 </target>
 
 </project>
