@@ -1,4 +1,4 @@
-<project default="run">
+<project name="HelloWorld" default="run">
 
 <target name= "clean">
 <delete dir="build"/>
@@ -18,7 +18,12 @@
 </jar>
 </target>
 
-<target name="run" depends="jar">
+<target name="run" depends="info">
 <java jar="build/jar/HelloWorld.jar" fork="true"/>
 </target>
+
+<target name="info" depends="jar">
+<echo>Hello World Sample application</echo>
+</target>
+
 </project>
