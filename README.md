@@ -12,3 +12,19 @@ Proces: a. clone the repo
         b. check jdk and ant is avvaiable on local or VM. 
         c. get in the repo directory 
         d. run the ant command
+
+
+
+Setup the Path under .bash_profile
+
+## JAVA PATH
+
+JAVA_HOME=/home/vagrant/jdk-12
+export PATH=$PATH:$JAVA_HOME/bin
+
+## ANT PATH
+
+ANT_HOME=/home/vagrant/apache-ant-1.9.16
+
+export PATH=$PATH:$ANT_HOME/bin
+
